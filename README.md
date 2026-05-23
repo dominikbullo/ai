@@ -9,7 +9,7 @@ My Claude Code setup — agents and skills for engineering work in energy infras
 | [`agents/engineering/`](agents/engineering/) | General-purpose Claude Code subagents for backend, frontend, data, devops, security, and incident response |
 | [`agents/energy/`](agents/energy/) | Domain-specific agents for SCADA, Nordic ancillary markets, and asset dispatch optimisation |
 | [`agents/productivity/`](agents/productivity/) | Writing agents for docs, ADRs, runbooks |
-| [`skills/`](https://github.com/dominikbullo/skills) | Skills distributed separately via `npx skills` |
+| [`skills/`](skills/) | Claude Code skills for daily workflow automation |
 
 ## Agents
 
@@ -56,11 +56,22 @@ This symlinks all agents to `~/.claude/agents/`. Pull and re-run to update.
 
 ### Skills
 
-Skills are distributed via [dominikbullo/skills](https://github.com/dominikbullo/skills):
+```bash
+npx skills@latest add dominikbullo/ai --global --all
+```
+
+Or clone and link manually:
 
 ```bash
-npx skills@latest add dominikbullo/skills --global --all
+./scripts/link-skills.sh
 ```
+
+| Skill | Description |
+|-------|-------------|
+| [daily-plan](skills/personal/daily-plan/SKILL.md) | Morning planning brief — calendar, followups, Slack, focus areas |
+| [daily-recap](skills/personal/daily-recap/SKILL.md) | Retrospective pipeline — journal entry + wiki ingestion |
+| [github-check](skills/personal/github-check/SKILL.md) | Scan watched repos for PRs, reviews, CI status, issues |
+| [claude-sessions-check](skills/personal/claude-sessions-check/SKILL.md) | Surface Claude session activity for a date or range |
 
 ## Stack
 
