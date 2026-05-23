@@ -2,18 +2,23 @@
 
 My Claude Code setup — agents and skills for engineering work in energy infrastructure.
 
-## What's here
+## Install
 
-| Directory | What it is |
-|-----------|-----------|
-| [`agents/engineering/`](agents/engineering/) | General-purpose Claude Code subagents for backend, frontend, data, devops, security, and incident response |
-| [`agents/energy/`](agents/energy/) | Domain-specific agents for SCADA, Nordic ancillary markets, and asset dispatch optimisation |
-| [`agents/productivity/`](agents/productivity/) | Writing agents for docs, ADRs, runbooks |
-| [`skills/`](skills/) | Claude Code skills for daily workflow automation |
+```bash
+# Clone and link agents to ~/.claude/agents/
+git clone https://github.com/dominikbullo/ai ~/ai && ~/ai/scripts/link-agents.sh
+
+# Install skills to ~/.claude/skills/
+npx skills@latest add dominikbullo/ai --global --all
+```
+
+Pull and re-run the scripts to update.
+
+---
 
 ## Agents
 
-Agents live in `~/.claude/agents/` and are invoked with `@agent-name` in Claude Code.
+Subagents invoked with `@agent-name` in Claude Code. Definitions live in `agents/`.
 
 ### Engineering
 
@@ -29,7 +34,7 @@ Agents live in `~/.claude/agents/` and are invoked with `@agent-name` in Claude 
 
 ### Energy
 
-Purpose-built for energy infrastructure engineering. Useful if you work on BESS, wind, hydro, or Nordic power markets.
+Purpose-built for energy infrastructure. Useful if you work on BESS, wind, hydro, or Nordic power markets.
 
 | Agent | Description |
 |-------|-------------|
@@ -43,28 +48,11 @@ Purpose-built for energy infrastructure engineering. Useful if you work on BESS,
 |-------|-------------|
 | [technical-writer](agents/productivity/technical-writer.md) | ADRs, RFCs, runbooks, API docs, onboarding guides |
 
-## Install
+---
 
-### Agents
+## Skills
 
-```bash
-git clone https://github.com/dominikbullo/ai ~/ai
-cd ~/ai && ./scripts/link-agents.sh
-```
-
-This symlinks all agents to `~/.claude/agents/`. Pull and re-run to update.
-
-### Skills
-
-```bash
-npx skills@latest add dominikbullo/ai --global --all
-```
-
-Or clone and link manually:
-
-```bash
-./scripts/link-skills.sh
-```
+Invoked with `/skill-name` in Claude Code. Definitions live in `skills/`.
 
 | Skill | Description |
 |-------|-------------|
@@ -73,8 +61,9 @@ Or clone and link manually:
 | [github-check](skills/personal/github-check/SKILL.md) | Scan watched repos for PRs, reviews, CI status, issues |
 | [claude-sessions-check](skills/personal/claude-sessions-check/SKILL.md) | Surface Claude session activity for a date or range |
 
+---
+
 ## Stack
 
-Python · FastAPI · Django · TypeScript · Vue.js · PostgreSQL · TimescaleDB · GCP · Kubernetes · Terraform
-
-Domain: BESS · SCADA · EMS · IEC 61850 · FCR · mFRR · Nord Pool
+Python · FastAPI · Django · TypeScript · Vue.js · PostgreSQL · TimescaleDB · GCP · Kubernetes · Terraform  
+BESS · SCADA · EMS · IEC 61850 · FCR · mFRR · Nord Pool
