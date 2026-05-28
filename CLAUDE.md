@@ -10,12 +10,6 @@ Organized into bucket folders under `skills/`:
 - `deprecated/` — no longer used
 
 ```bash
-./scripts/link-skills.sh
-```
-
-Or via skills CLI:
-
-```bash
 npx skills@latest add dominikbullo/ai
 ```
 
