@@ -1,6 +1,4 @@
 ---
-metadata:
-  internal: true
 name: daily-recap
 description: Retrospective pipeline for one or more past days — fetches calendar, scans Slack, email, GitHub, and Claude sessions, writes a raw journal entry, then ingests it into the wiki (daily/weekly/monthly/quarterly + goals). Use when the user says "recap yesterday", "process my journal", "I was on vacation catch me up", or runs /daily-recap with an optional date or range.
 ---

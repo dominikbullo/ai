@@ -1,6 +1,4 @@
 ---
-metadata:
-  internal: true
 name: claude-sessions-check
 description: Surface Claude AI session activity (claude.ai + claude.ai/code) for a given date or date range. Queries claude-mem MCP timeline for automated sources; prompts for manual web/mobile input. Used by daily-plan (surface open threads) and daily-recap (capture what was worked on). Call directly with /claude-sessions-check [--date YYYY-MM-DD] [--range ...] [--mode plan|recap|standalone].
 ---

@@ -1,6 +1,4 @@
 ---
-metadata:
-  internal: true
 name: github-check
 description: Scan watched GitHub repositories for PRs, review requests, CI status, commits, and issues. Reads repo list from wiki/_meta/github-watch.md. Usable standalone (/github-check) or called by daily-plan/daily-recap. Accepts --date, --range, --all, --mode flags.
 ---

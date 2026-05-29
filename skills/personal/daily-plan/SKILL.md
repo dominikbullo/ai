@@ -1,6 +1,4 @@
 ---
-metadata:
-  internal: true
 name: daily-plan
 description: Morning planning brief — fetches today's calendar, pulls open followups from yesterday's journal, scans Slack and email, checks GitHub, surfaces Claude session threads, suggests focus areas mapped to goals, and writes a raw journal seed. Use when the user says "plan my day", "what's on today", "prepare me for the day", or runs /daily-plan.
 ---
