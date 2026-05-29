@@ -1,9 +1,9 @@
 {
   "name": "dominikbullo-skills",
   "skills": [
-    "./skills/personal/daily-plan",
-    "./skills/personal/daily-recap",
-    "./skills/personal/github-check",
-    "./skills/personal/claude-sessions-check"
+    "./skills/productivity/daily-plan",
+    "./skills/productivity/daily-recap",
+    "./skills/productivity/github-check",
+    "./skills/productivity/claude-sessions-check"
   ]
 }
